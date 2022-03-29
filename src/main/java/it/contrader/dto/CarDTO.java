@@ -29,4 +29,6 @@ public class CarDTO {
 	boolean sell = false;
 	
 	boolean registered = false;
+	
+	private double prezzo;
 }

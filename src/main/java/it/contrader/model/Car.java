@@ -35,6 +35,8 @@ public class Car {
 	
 	boolean registered = false;
 	
+	private double prezzo;
+	
 	@ManyToMany
 	Set<Concessionaria> concessionaria = new HashSet<>();
 	
