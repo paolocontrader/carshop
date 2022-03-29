@@ -1,9 +1,13 @@
 package it.contrader.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 import it.contrader.dto.UserDTO;
 import lombok.AllArgsConstructor;
@@ -35,9 +39,11 @@ public class Car {
 	
 	boolean registered = false;
 	
-	private double prezzo;
-	
 	@ManyToMany
 	Set<Concessionaria> concessionaria = new HashSet<>();
+	
+	
+	private double prezzo;
+	
 	
 }
