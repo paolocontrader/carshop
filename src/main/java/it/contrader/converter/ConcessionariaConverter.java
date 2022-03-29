@@ -12,7 +12,7 @@ public class ConcessionariaConverter extends AbstractConverter<Concessionaria,Co
 	public Concessionaria toEntity(ConcessionariaDTO concessionariaDTO) {
 		Concessionaria concessionaria = null;
 		if (concessionariaDTO != null) {
-			concessionaria = new Concessionaria(concessionariaDTO.getId(),concessionariaDTO.getNomeConcessionaria(),concessionariaDTO.getPaese(),concessionariaDTO.getParcoAuto());
+			concessionaria = new Concessionaria(concessionariaDTO.getId(),concessionariaDTO.getNomeConcessionaria(),concessionariaDTO.getPaese(),concessionariaDTO.getCar());
 		}
 		return concessionaria;
 	}
@@ -20,7 +20,7 @@ public class ConcessionariaConverter extends AbstractConverter<Concessionaria,Co
 	public ConcessionariaDTO toDTO(Concessionaria concessionaria) {
 		ConcessionariaDTO concessionariaDTO = null;
 		if (concessionaria != null) {
-			concessionariaDTO = new ConcessionariaDTO(concessionaria.getId(),concessionaria.getNomeConcessionaria(),concessionaria.getPaese(),concessionaria.getParcoAuto());
+			concessionariaDTO = new ConcessionariaDTO(concessionaria.getId(),concessionaria.getNomeConcessionaria(),concessionaria.getPaese(),concessionaria.getCar());
 
 		}
 		return concessionariaDTO;

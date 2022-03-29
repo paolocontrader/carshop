@@ -6,6 +6,7 @@ import java.util.Set;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
+import it.contrader.model.Car;
 import it.contrader.model.Concessionaria;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,8 +34,6 @@ public class CarDTO {
 	boolean sell = false;
 	
 	boolean registered = false;
-	
-	Set<Concessionaria> concessionaria = new HashSet<>();
-	
+	private Set<Concessionaria> concessionarie= new HashSet<>() ;
 	private double prezzo;
 }

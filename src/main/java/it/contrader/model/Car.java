@@ -7,9 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
-import it.contrader.dto.UserDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -40,8 +42,7 @@ public class Car {
 	boolean registered = false;
 	
 	@ManyToMany
-	Set<Concessionaria> concessionaria = new HashSet<>();
-	
+	private Set<Concessionaria> concessionarie= new HashSet<>() ;
 	
 	private double prezzo;
 	
