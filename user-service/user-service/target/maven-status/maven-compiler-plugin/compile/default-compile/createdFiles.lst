@@ -1,0 +1,14 @@
+com\example\userservice\dto\Department.class
+com\example\userservice\dto\ResponseTemplateVO.class
+com\example\userservice\UserServiceApplication.class
+com\example\userservice\dto\UserDepartmentDTO$UserDepartmentDTOBuilder.class
+com\example\userservice\controller\UserController.class
+com\example\userservice\service\UserService.class
+com\example\userservice\dto\UserDepartmentDTO.class
+com\example\userservice\converter\Converter.class
+com\example\userservice\service\AbstractService.class
+com\example\userservice\controller\AbstractController.class
+com\example\userservice\service\ServiceDTO.class
+com\example\userservice\converter\AbstractConverter.class
+com\example\userservice\entity\User.class
+com\example\userservice\repository\UserRepository.class

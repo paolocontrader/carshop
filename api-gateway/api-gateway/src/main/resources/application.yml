@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: carModules
+          uri: lb://car-micro
+          predicates:
+            - Path=/cars/**
+        - id: concessionariaModules
+          uri: lb://conc-micro
+          predicates:
+            - Path=/concessionarie/**
+        - id: userModules
+          uri: lb://user-micro
+          predicates:
+            - Path=/users/**
+            
+       
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+#cloud:
+#  gateway:
+#    routes:
+#      - id: USER-SERVICE
+#        uri: lb://USER-SERVICE
+#        predicates:
+#        - Path=/users/**
+#      - id: DEPARTMENT-SERVICE
+#        uri: lb://DEPARTMENT-SERVICE
+#        predicates:
+#        - Path=/department/**
+
